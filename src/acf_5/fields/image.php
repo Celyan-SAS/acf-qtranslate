@@ -75,6 +75,15 @@ class acf_qtranslate_acf_5_image extends acf_field_image {
 		add_filter('wp_prepare_attachment_for_js',		array($this, 'wp_prepare_attachment_for_js'), 10, 3);
 
 	}
+	
+	/*
+	 * In case this function doesn't exist anymore in acf pro
+	 * we declare it to not have the warning
+	 * \advanced-custom-fields-pro\includes\fields\class-acf-field-image.php
+	 */
+	function wp_prepare_attachment_for_js($response, $attachment, $meta){		
+		return $response;
+	}
 
 	/*
 	 *  render_field()

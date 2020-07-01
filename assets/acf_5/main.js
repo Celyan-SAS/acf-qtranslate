@@ -1,5 +1,8 @@
 
-
+//test if it's undefined (was causing a problem in admin media square screen)
+if(typeof acf != "undefined"
+	&& typeof acf.models != "undefined"
+	&& typeof acf.models.FileField != "undefined"){
 acf.registerFieldType(acf.models.FileField.extend({
   type: 'qtranslate_file',
 
@@ -42,8 +45,11 @@ acf.registerFieldType(acf.models.FileField.extend({
     }
   }
 }));
+}
 
-
+if(typeof acf != "undefined"
+	&& typeof acf.models != "undefined"
+	&& typeof acf.models.ImageField != "undefined"){
 acf.registerFieldType(acf.models.ImageField.extend({
   type: 'qtranslate_image',
 
@@ -81,8 +87,11 @@ acf.registerFieldType(acf.models.ImageField.extend({
     }
   }
 }));
+	}
 
-
+if(typeof acf != "undefined"
+	&& typeof acf.models != "undefined"
+	&& typeof acf.models.PostObjectField != "undefined"){
 acf.registerFieldType(acf.models.PostObjectField.extend({
   type: 'qtranslate_post_object',
 
@@ -131,8 +140,12 @@ acf.registerFieldType(acf.models.PostObjectField.extend({
     }
   }
 }));
+	}
 
 
+if(typeof acf != "undefined"
+	&& typeof acf.models != "undefined"
+	&& typeof acf.models.UrlField != "undefined"){
 acf.registerFieldType(acf.models.UrlField.extend({
   type: 'qtranslate_url',
 
@@ -144,8 +157,11 @@ acf.registerFieldType(acf.models.UrlField.extend({
     return this.$('.acf-input-wrap.current-language input[type="url"]');
   }
 }));
+	}
 
-
+if(typeof acf != "undefined"
+	&& typeof acf.models != "undefined"
+	&& typeof acf.models.WysiwygField != "undefined"){
 acf.registerFieldType(acf.models.WysiwygField.extend({
   type: 'qtranslate_wysiwyg',
 
@@ -182,4 +198,5 @@ acf.registerFieldType(acf.models.WysiwygField.extend({
     });
   }
 }));
+	}
 
